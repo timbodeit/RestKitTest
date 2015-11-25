@@ -1,11 +1,175 @@
 language: objective-c
-osx_image: xcode7.1
+matrix:
+  include:
+    - env: GEMFILE=GemfileMaster PODFILE=PodfileDevelopment
+      osx_image: xcode7.2b3
+    - env: GEMFILE=GemfileMaster BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode7.2b3
+    - env: GEMFILE=GemfileMaster PODFILE=PodfileDevelopment
+      osx_image: xcode7.1
+    - env: GEMFILE=GemfileMaster BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode7.1
+    - env: GEMFILE=GemfileMaster PODFILE=PodfileDevelopment
+      osx_image: xcode7
+    - env: GEMFILE=GemfileMaster BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode7
+    - env: GEMFILE=GemfileMaster PODFILE=PodfileDevelopment
+      osx_image: xcode6.4
+    - env: GEMFILE=GemfileMaster BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode6.4
+    - env: GEMFILE=GemfileInbetween PODFILE=PodfileDevelopment
+      osx_image: xcode7.2b3
+    - env: GEMFILE=GemfileInbetween BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode7.2b3
+    - env: GEMFILE=GemfileInbetween PODFILE=PodfileDevelopment
+      osx_image: xcode7.1
+    - env: GEMFILE=GemfileInbetween BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode7.1
+    - env: GEMFILE=GemfileInbetween PODFILE=PodfileDevelopment
+      osx_image: xcode7
+    - env: GEMFILE=GemfileInbetween BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode7
+    - env: GEMFILE=GemfileInbetween PODFILE=PodfileDevelopment
+      osx_image: xcode6.4
+    - env: GEMFILE=GemfileInbetween BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode6.4
+    - env: GEMFILE=Gemfile39 PODFILE=PodfileDevelopment
+      osx_image: xcode7.2b3
+    - env: GEMFILE=Gemfile39 BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode7.2b3
+    - env: GEMFILE=Gemfile39 PODFILE=PodfileDevelopment
+      osx_image: xcode7.1
+    - env: GEMFILE=Gemfile39 BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode7.1
+    - env: GEMFILE=Gemfile39 PODFILE=PodfileDevelopment
+      osx_image: xcode7
+    - env: GEMFILE=Gemfile39 BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode7
+    - env: GEMFILE=Gemfile39 PODFILE=PodfileDevelopment
+      osx_image: xcode6.4
+    - env: GEMFILE=Gemfile39 BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode6.4
+    - env: GEMFILE=Gemfile38.2 PODFILE=PodfileDevelopment
+      osx_image: xcode7.2b3
+    - env: GEMFILE=Gemfile38.2 BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode7.2b3
+    - env: GEMFILE=Gemfile38.2 PODFILE=PodfileDevelopment
+      osx_image: xcode7.1
+    - env: GEMFILE=Gemfile38.2 BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode7.1
+    - env: GEMFILE=Gemfile38.2 PODFILE=PodfileDevelopment
+      osx_image: xcode7
+    - env: GEMFILE=Gemfile38.2 BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode7
+    - env: GEMFILE=Gemfile38.2 PODFILE=PodfileDevelopment
+      osx_image: xcode6.4
+    - env: GEMFILE=Gemfile38.2 BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode6.4
+    - env: GEMFILE=Gemfile38.1 PODFILE=PodfileDevelopment
+      osx_image: xcode7.2b3
+    - env: GEMFILE=Gemfile38.1 BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode7.2b3
+    - env: GEMFILE=Gemfile38.1 PODFILE=PodfileDevelopment
+      osx_image: xcode7.1
+    - env: GEMFILE=Gemfile38.1 BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode7.1
+    - env: GEMFILE=Gemfile38.1 PODFILE=PodfileDevelopment
+      osx_image: xcode7
+    - env: GEMFILE=Gemfile38.1 BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode7
+    - env: GEMFILE=Gemfile38.1 PODFILE=PodfileDevelopment
+      osx_image: xcode6.4
+    - env: GEMFILE=Gemfile38.1 BUILDTWICE=1 PODFILE=PodfileDevelopment
+      osx_image: xcode6.4
+    - env: GEMFILE=GemfileMaster PODFILE=Podfile26
+      osx_image: xcode7.2b3
+    - env: GEMFILE=GemfileMaster BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode7.2b3
+    - env: GEMFILE=GemfileMaster PODFILE=Podfile26
+      osx_image: xcode7.1
+    - env: GEMFILE=GemfileMaster BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode7.1
+    - env: GEMFILE=GemfileMaster PODFILE=Podfile26
+      osx_image: xcode7
+    - env: GEMFILE=GemfileMaster BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode7
+    - env: GEMFILE=GemfileMaster PODFILE=Podfile26
+      osx_image: xcode6.4
+    - env: GEMFILE=GemfileMaster BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode6.4
+    - env: GEMFILE=GemfileInbetween PODFILE=Podfile26
+      osx_image: xcode7.2b3
+    - env: GEMFILE=GemfileInbetween BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode7.2b3
+    - env: GEMFILE=GemfileInbetween PODFILE=Podfile26
+      osx_image: xcode7.1
+    - env: GEMFILE=GemfileInbetween BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode7.1
+    - env: GEMFILE=GemfileInbetween PODFILE=Podfile26
+      osx_image: xcode7
+    - env: GEMFILE=GemfileInbetween BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode7
+    - env: GEMFILE=GemfileInbetween PODFILE=Podfile26
+      osx_image: xcode6.4
+    - env: GEMFILE=GemfileInbetween BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode6.4
+    - env: GEMFILE=Gemfile39 PODFILE=Podfile26
+      osx_image: xcode7.2b3
+    - env: GEMFILE=Gemfile39 BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode7.2b3
+    - env: GEMFILE=Gemfile39 PODFILE=Podfile26
+      osx_image: xcode7.1
+    - env: GEMFILE=Gemfile39 BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode7.1
+    - env: GEMFILE=Gemfile39 PODFILE=Podfile26
+      osx_image: xcode7
+    - env: GEMFILE=Gemfile39 BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode7
+    - env: GEMFILE=Gemfile39 PODFILE=Podfile26
+      osx_image: xcode6.4
+    - env: GEMFILE=Gemfile39 BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode6.4
+    - env: GEMFILE=Gemfile38.2 PODFILE=Podfile26
+      osx_image: xcode7.2b3
+    - env: GEMFILE=Gemfile38.2 BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode7.2b3
+    - env: GEMFILE=Gemfile38.2 PODFILE=Podfile26
+      osx_image: xcode7.1
+    - env: GEMFILE=Gemfile38.2 BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode7.1
+    - env: GEMFILE=Gemfile38.2 PODFILE=Podfile26
+      osx_image: xcode7
+    - env: GEMFILE=Gemfile38.2 BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode7
+    - env: GEMFILE=Gemfile38.2 PODFILE=Podfile26
+      osx_image: xcode6.4
+    - env: GEMFILE=Gemfile38.2 BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode6.4
+    - env: GEMFILE=Gemfile38.1 PODFILE=Podfile26
+      osx_image: xcode7.2b3
+    - env: GEMFILE=Gemfile38.1 BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode7.2b3
+    - env: GEMFILE=Gemfile38.1 PODFILE=Podfile26
+      osx_image: xcode7.1
+    - env: GEMFILE=Gemfile38.1 BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode7.1
+    - env: GEMFILE=Gemfile38.1 PODFILE=Podfile26
+      osx_image: xcode7
+    - env: GEMFILE=Gemfile38.1 BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode7
+    - env: GEMFILE=Gemfile38.1 PODFILE=Podfile26
+      osx_image: xcode6.4
+    - env: GEMFILE=Gemfile38.1 BUILDTWICE=1 PODFILE=Podfile26
+      osx_image: xcode6.4
+
 before_install:
   - export LANG=en_US.UTF-8
+  - cp "$GEMFILE" Gemfile
+  - cp "$PODFILE" Podfile
   - bundle install
   - bundle exec pod install
 script:
-  - xctool -sdk iphonesimulator -workspace RestKitTest.xcworkspace -scheme RestKitTest clean build &>/dev/null || true
-  # Run build twice since a bunch of unrelated file not found errors disappear
-  # on the second build.
+  - check_build_twice.sh || xctool -sdk iphonesimulator -workspace RestKitTest.xcworkspace -scheme RestKitTest clean build &>/dev/null || true
+  # Run build twice to check for errors that disappear when building for the
+  # second time
   - xctool -sdk iphonesimulator -workspace RestKitTest.xcworkspace -scheme RestKitTest build
