@@ -169,7 +169,7 @@ before_install:
   - bundle install
   - bundle exec pod install
 script:
-  - check_build_twice.sh || xctool -sdk iphonesimulator -workspace RestKitTest.xcworkspace -scheme RestKitTest clean build &>/dev/null || true
+  - ./check_build_twice.sh || xctool -sdk iphonesimulator -workspace RestKitTest.xcworkspace -scheme RestKitTest clean build &>/dev/null || true
   # Run build twice to check for errors that disappear when building for the
   # second time
   - xctool -sdk iphonesimulator -workspace RestKitTest.xcworkspace -scheme RestKitTest build
