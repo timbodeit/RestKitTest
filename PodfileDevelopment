@@ -4,7 +4,7 @@
 use_frameworks!
 
 target 'RestKitTest' do
-   pod "RestKit", :git => "https://github.com/RestKit/RestKit.git", :branch => "development"
+   pod "RestKit", :git => "https://github.com/timbodeit/RestKit.git", :branch => "move_lcl_rk"
 end
 
 # post_install do |installer|

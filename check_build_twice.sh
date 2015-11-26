@@ -1,1 +1,1 @@
-[ -n "$BUILDTWICE" ]
+[ -z "$BUILDTWICE" ]
